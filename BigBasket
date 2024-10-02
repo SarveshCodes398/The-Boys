@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Promo Generator</title>
+    <link rel="stylesheet" href="Hackathon.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Banner & Video Generator for BigBasket</h1>
+        <p>Revolutionize your promotional content creation with AI by The Boys</p>
+    </header>
+
+    <section id="upload-section">
+        <!--section to upload images about items to be selled-->
+        <h2>Upload Your Content</h2>
+        <form id="promo-form">
+            <label for="product-images">Product Images:</label>
+            <input type="file" id="product-images" name="product-images" accept="image/*" multiple required><br>
+
+            <label for="promo-details">Promotional Offer:</label>
+            <input type="text" id="promo-details" name="promo-details" placeholder="E.g. 50% Off, Buy One Get One Free" required><br>
+
+            <label for="color-palette">Select Color Palette:</label>
+            <input type="color" id="color1" name="color1" value="#ff0000">
+            <input type="color" id="color2" name="color2" value="#00ff00">
+            <input type="color" id="color3" name="color3" value="#0000ff"><br>
+
+            <label for="theme">Select Theme:</label>
+            <!--if any festival occurs and we need to provide a different banner for that particular situation-->
+            <select id="theme" name="theme">
+                <option value="festival">festival</option>
+                <option value="independence-day">Independence Day</option>
+                <option value="diwali">Diwali</option>
+                <option value="christmas">Christmas</option>
+            </select><br>
+
+            <label for="output-specifications">Output Specifications:</label>
+            <select id="output-type" name="output-type">
+                <option value="banner">Banner</option>
+                <option value="video">Video</option>
+            </select>
+            <label for="resolution">Resolution:</label>
+            <select id="resolution" name="resolution">
+                <option value="1080p">1080p</option>
+                <option value="720p">720p</option>
+                <option value="480p">480p</option>
+            </select><br>
+
+            <button type="submit">Generate Content</button>
+        </form>
+    </section>
+
+    <section id="output-section">
+        <h2>Your Generated Banner/Video</h2>
+        <div id="output-content">
+            <!-- AI-generated banners or videos will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AI-Powered Promo Generator by The Boys</p>
+    </footer>
+</body>
+</html>
